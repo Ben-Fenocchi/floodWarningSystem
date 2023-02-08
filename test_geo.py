@@ -1,7 +1,7 @@
 from floodsystem.geo import rivers_with_station, stations_by_river, stations_by_distance, stations_within_radius
 from floodsystem.station import MonitoringStation
-from haversine import haversine, Unit
-
+#from haversine import haversine, Unit
+print("test")
 
 testStation1 = MonitoringStation("test ID","test m-ID","CamStation",(1,1),(0,0),"river Cam","Cambridge")
 testStation2 = MonitoringStation("test ID","test m-ID","OxfStation",(1,2),(0,0),"river Ox","Oxford")
