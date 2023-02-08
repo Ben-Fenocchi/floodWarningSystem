@@ -7,6 +7,12 @@ import datetime
 
 from floodsystem.datafetcher import fetch_measure_levels
 from floodsystem.stationdata import build_station_list
+from floodsystem.datafetcher import fetch_latest_water_level_data
+
+def test_fetch_latest_water_level_data():
+   
+    data = fetch_latest_water_level_data()
+    assert type(data) == dict
 
 
 def test_build_station_list():
