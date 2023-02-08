@@ -44,3 +44,13 @@ def stations_by_distance(stations, p):
         stationsByDistanceList.append(data)
 
     return sorted_by_key(stationsByDistanceList,-1)#list of lists to sort, index of sublist sorting by, -1 puts to the end which is where my distance haversine is
+
+
+def stations_within_radius(stations, centre, r):
+
+StationsWithinRadius = []
+   for station in stations:
+      distance = haversine(station.coord, centre)
+      If distance <= r then:
+         StationsWithinRadius.append(station)
+return StationsWithinRadius
