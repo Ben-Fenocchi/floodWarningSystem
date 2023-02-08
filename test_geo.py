@@ -1,4 +1,4 @@
-from floodsystem.geo import rivers_with_station, stations_by_river, stations_by_distance, stations_within_radius
+from floodsystem.geo import rivers_with_station, stations_by_river, stations_by_distance, stations_within_radius, rivers_by_station_number
 from floodsystem.station import MonitoringStation
 #from haversine import haversine, Unit
 print("test")
