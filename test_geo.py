@@ -29,4 +29,11 @@ def test_stations_within_radius():
     stationList = (testStation1,testStation2,testStation3)
     result = stations_within_radius(stationList,(0,0),157.3)
     assert result == [testStation1]
+    
+def test_rivers_by_station_number():
+    stationList = (testStation1,testStation2,testStation3,testStation4)
+    number_rivers = 1
+    result = rivers_by_station_number(stationList, number_rivers)
+    assert result == [['river Thames', 2]]
+    
 
