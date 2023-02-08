@@ -1,5 +1,6 @@
 from floodsystem.stationdata import build_station_list
 from floodsystem.geo import stations_by_distance
+from floodsystem.station import MonitoringStation
 
 
 def run():
@@ -28,8 +29,7 @@ def run():
     for item in furthest:
         currentTuple = tuple((item[0].name, item[0].town, item[1]))
         furthestStations.append(currentTuple)
- 
-        
+
 
     print(closestStations)
     print(furthestStations)
