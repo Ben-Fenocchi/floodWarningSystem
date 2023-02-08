@@ -54,3 +54,23 @@ def stations_within_radius(stations, centre, r):
          if distance <= r:
               StationsWithinRadius.append(station)
      return StationsWithinRadius
+
+def rivers_by_station_number(stations, N):
+
+   riverNames = rivers_with_station(stations)
+   riverList = []
+   for river in riverNames:
+      count = 0
+      for station in stations:
+          if station.river == river:
+             count = count + 1
+      data = [river, count]
+      riverList.append(data)
+   riverList = sorted_by_key(riverList,-1,True)
+   final_value = riverList[N-1][-1]
+   print(final_value)
+   count = N
+   while riverList[count][-1] == final_value:
+       count = count + 1
+   riverList = riverList[0:count]
+   return riverList
