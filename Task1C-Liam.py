@@ -10,8 +10,8 @@ def run():
   stations = build_station_list()
   StationsWithinRadius = stations_within_radius(stations,camCityCentre, radius)
   StationsWithinRadius.sort
-  for station in stations:
-    print(station)
+  for Stations in StationsWithinRadius:
+    print(Stations)
   
   
   
