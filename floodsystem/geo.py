@@ -64,7 +64,7 @@ def rivers_by_station_number(stations, N):
       for station in stations:
           if station.river == river:
              count = count + 1
-      data = [river, count]
+      data = (river, count)
       riverList.append(data)
    riverList = sorted_by_key(riverList,-1,True)
    final_value = riverList[N-1][-1]
