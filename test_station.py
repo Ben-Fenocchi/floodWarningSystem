@@ -33,3 +33,4 @@ def test_inconsistent_typical_range_stations():
     stationList = (inconsistentStation1,inconsistentStation2,consistentStation)
     result = inconsistent_typical_range_stations(stationList)
     assert result == [inconsistentStation1,inconsistentStation2]
+    assert type(result) is list 
