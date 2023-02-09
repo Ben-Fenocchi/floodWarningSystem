@@ -8,6 +8,12 @@ import datetime
 from floodsystem.datafetcher import fetch_measure_levels
 from floodsystem.stationdata import build_station_list
 from floodsystem.datafetcher import fetch_latest_water_level_data
+from floodsystem.datafetcher import fetch
+
+def test_fetch():
+    url = "http://environment.data.gov.uk/flood-monitoring/id/measures?parameter=level&qualifier=Stage&qualifier=level"
+    data = fetch(url)
+    assert type(data) == dict
 
 def test_fetch_latest_water_level_data():
    
