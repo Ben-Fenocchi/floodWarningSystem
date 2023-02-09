@@ -21,9 +21,9 @@ def test_fetch_station_data():
     data = fetch_station_data()
     assert type(data) == dict
     
-def test_fetch_water_level_data():
+def test_fetch_latest_water_level_data():
    
-    data = fetch_water_level_data()
+    data = fetch_latest_water_level_data()
     assert type(data) == dict
 
 
