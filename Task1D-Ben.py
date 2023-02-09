@@ -23,11 +23,11 @@ def run():
         for station in stations:#looks for all the stations on this river
             if station.river == river:
                 counter+=1#if the station is on the river then add to a counter
-        if counter >1 :#if there is more than one station on the river
+        if counter >=1 :#if there is more than one station on the river
             riversWithMoreThanOneStation.append(river)#add it to the list
         counter = 0#reset for the next list
 
-    print(len(riversWithMoreThanOneStation),"rivers with multiple stations")
+    print(len(riversWithMoreThanOneStation),"rivers with at least one stations")
     print("The first ten are",riversWithMoreThanOneStation[:10])
 
 
