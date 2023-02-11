@@ -5,7 +5,7 @@
 for manipulating/modifying station data
 
 """
-from floodsystem.stationdata import update_water_levels
+#from floodsystem.stationdata import update_water_levels
 
 class MonitoringStation:
     """This class represents a river level monitoring station"""
@@ -48,7 +48,7 @@ class MonitoringStation:
             return True# data is consistent
     
     def relative_water_level(self):#needs to return 0 if water level is at the low, and 1 at the high
-        self.latest_level = update_water_levels(self)
+        #self.latest_level = update_water_levels(self)
         if self.latest_level is None or not self.typical_range_consistent:
             return None
         else:
