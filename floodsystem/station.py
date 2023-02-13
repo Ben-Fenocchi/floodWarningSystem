@@ -40,34 +40,31 @@ class MonitoringStation:
         return d
 
     def typical_range_consistent(self):
-        if  self.typical_range is None :#if low range is bigger than high
+        if  self.typical_range is None :
             return False#data is inconsistent 
-        elif (self.typical_range[0]>self.typical_range[1]) :
+        elif (self.typical_range[1]<self.typical_range[0]) :
             return False#data is not there
+        elif len(self.typical_range)!=2:
+            return False
         else: 
             return True# data is consistent
     
     def relative_water_level(self):#needs to return 0 if water level is at the low, and 1 at the high
-        #self.latest_level = update_water_levels(self)
-        if self.latest_level is None or not self.typical_range_consistent:
-            return None
-        else:
+
+        if self.typical_range_consistent() == True and self.latest_level != None:
             typicalHigh = self.typical_range[1]
             typicalLow = self.typical_range[0]
-            typicalRange = typicalHigh - typicalLow
+            typicalRange = typicalHigh - typicalLow 
             diff = self.latest_level - typicalLow
             ratio = diff/typicalRange
-            return diff
+            return ratio
+           
+        else:
+            return None
+            
+            
+
     
-
-
-
-
-
-
-
-
-
 
 
 def inconsistent_typical_range_stations(stations):
