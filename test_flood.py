@@ -1,5 +1,5 @@
 from floodsystem.station import MonitoringStation
-from floodsystem.flood import stations_level_over_threshold
+from floodsystem.flood import stations_level_over_threshold, stations_highest_rel_level
 
 testStation1 = MonitoringStation("test ID","test m-ID","CamStation",(1,1),(0,1.0),"river Cam","Cambridge")
 testStation2 = MonitoringStation("test ID","test m-ID","OxfStation",(1,2),(0,1.0),"river Ox","Oxford")
@@ -17,3 +17,9 @@ def test_stations_level_over_threshold():
     highRiskStations = stations_level_over_threshold(stationList,0.79)
     print(highRiskStations)
     assert highRiskStations == [(testStation3,0.81),(testStation4,0.8)]
+
+def test_stations_highest_rel_level():
+    highRiskFour = stations_highest_rel_level(stationList,4)
+    assert len(highRiskFour) == 4#checks returns the top 4 as it should
+    assert highRiskFour[0][1] > highRiskFour[1][1]#checks sorted in descending order
+

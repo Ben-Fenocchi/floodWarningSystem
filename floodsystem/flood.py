@@ -12,7 +12,7 @@ def stations_level_over_threshold(stations, tol):
     return highRiskList
 
 def stations_highest_rel_level(stations, N):
-    highRiskList = stations_level_over_threshold(stations,0)#setting tol to zero so get a list of pretty much all stations and their relative levels
+    highRiskList = stations_level_over_threshold(stations,-10000)#setting tol very low so get a list of all stations and their relative levels
     highestRelStations = highRiskList[:N]
     #this list is automatically sorted in descending relative level order from the way the stations_level_over_threshold is built
     return(highestRelStations)
