@@ -6,12 +6,13 @@ import datetime
 
 def run():
     stations = build_station_list()
-
-    necessaryStations = [x[0] for x in stations_highest_rel_level[stations,5]]
+    necessaryStations = stations_highest_rel_level(stations,5)
+    necessaryStations = necessaryStations[:5]
+    #takes the highest 5 stations
 
     for station in necessaryStations:
         dates,levels = fetch_measure_levels(station.measure_id, datetime.timedelta(days=10))
-        print(plot_water_levels(station,dates,levels))
+        plot_water_levels(station,dates,levels)
 
 
 if __name__ == "__main__":

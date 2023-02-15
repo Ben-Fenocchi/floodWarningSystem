@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 
-def plot_water_levels(station, dates, levels):
 
-    # Plot
+def plot_water_levels(station, dates, levels):
+    #plot
     plt.plot(dates,levels)
 
     # Add axis labels, rotate date labels and add plot title
@@ -14,4 +14,4 @@ def plot_water_levels(station, dates, levels):
     # Display plot
     plt.tight_layout()  # This makes sure plot does not cut off date labels
 
-    plt.show()
+    return(plt)
