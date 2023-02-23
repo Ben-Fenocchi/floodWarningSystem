@@ -7,11 +7,10 @@ def polyfit(dates, levels, p):
     x = matplotlib.dates.date2num(dates) # dates as floats
     y = levels
     # Using shifted x values, find coefficient of best-fit
-    # polynomial f(x) of degree 4
-    p_coeff = np.polyfit(x - x[0], y, 4)
+    # polynomial f(x) of degree p
+    p_coeff = np.polyfit(x - x[0], y, p)
 
     # Convert coefficient into a polynomial that can be evaluated
-    # e.g. poly(0.3)
     poly = np.poly1d(p_coeff)
 
     # Plot original data points
@@ -24,3 +23,4 @@ def polyfit(dates, levels, p):
 
     # Display plot
     plt.show()
+
