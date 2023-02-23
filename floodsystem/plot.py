@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
+import matplotlib.dates
 import math
-import matplotlib
 import numpy as np
 
 def plot_water_levels(station, dates, levels):
@@ -35,7 +35,8 @@ def plot_water_level_with_fit(station, dates, levels, p):
     y = levels
     p_coeff = np.polyfit(x - x[0], y, p)
     poly = np.poly1d(p_coeff)
-    x1 = np.linspace(x[0], x[-1], 30)
+    length = len(dates)
+    x1 = np.linspace(x[0], x[-1], length)
     plt.plot(x1, poly(x1 - x[0]))
     # Display plot
     plt.tight_layout()  # This makes sure plot does not cut off date labels
