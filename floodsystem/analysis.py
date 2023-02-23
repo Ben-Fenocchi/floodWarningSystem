@@ -23,4 +23,5 @@ def polyfit(dates, levels, p):
 
     # Display plot
     plt.show()
-
+    d0 = x[0]
+    return poly, d0
