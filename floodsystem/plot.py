@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import maplotlib.dates
+import matplotlib.dates
 import math
 import numpy as np
 
