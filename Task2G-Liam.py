@@ -21,11 +21,7 @@ def run():
     Risk_high = []
     Risk_moderate = []
     Risk_low = []
-    towns = []
     for station in necessaryStations:
-        print(station[0].town,station[1])
-        if station[0].town not in towns:
-            towns.append(station[0].town)
         dates,levels = fetch_measure_levels(station[0].measure_id, datetime.timedelta(days=1))
         x = matplotlib.dates.date2num(dates) # dates as floats
         y = levels
