@@ -12,8 +12,5 @@ def test_plot_water_levels():
     #be thrown up causing the test to fail
 
 p = 2
-item1, item2 = plot_water_level_with_fit(testStation4,dates,levels,p)
-print(item1)
-print(item2)
 def test_plot_water_level_with_fit():
     result = plot_water_level_with_fit(testStation4,dates,levels,p)
