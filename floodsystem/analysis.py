@@ -12,16 +12,5 @@ def polyfit(dates, levels, p):
 
     # Convert coefficient into a polynomial that can be evaluated
     poly = np.poly1d(p_coeff)
-
-    # Plot original data points
-    plt.plot(x, y, '.')
-
-    # Plot polynomial fit at 30 points along interval (note that polynomial
-    # is evaluated using the shift x)
-    x1 = np.linspace(x[0], x[-1], 30)
-    plt.plot(x1, poly(x1 - x[0]))
-
-    # Display plot
-    plt.show()
     d0 = x[0]
     return poly, d0

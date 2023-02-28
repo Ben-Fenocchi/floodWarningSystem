@@ -1,4 +1,5 @@
 from floodsystem.plot import plot_water_levels
+from floodsystem.plot import plot_water_level_with_fit
 from floodsystem.station import MonitoringStation
 
 testStation4 = MonitoringStation("test ID","test m-ID","LonStation2",(1,2),(0,1.0),"river Thames","London")
@@ -9,4 +10,10 @@ def test_plot_water_levels():
     result = plot_water_levels(testStation4,dates,levels)
     #This test checks that the function will accept the expected datatypes, as otherwise an error will
     #be thrown up causing the test to fail
-    
+
+p = 2
+item1, item2 = plot_water_level_with_fit(testStation4,dates,levels,p)
+print(item1)
+print(item2)
+def test_plot_water_level_with_fit():
+    result = plot_water_level_with_fit(testStation4,dates,levels,p)
