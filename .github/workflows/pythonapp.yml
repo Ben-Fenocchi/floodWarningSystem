@@ -42,4 +42,10 @@ jobs:
       - name: Run Deliverable 2 code
         run: |
           python Task2A.py
+          python Task2B-Ben.py
+          python Task2C-Ben.py
           python Task2D.py
+          python Task2E-Ben.py
+          python Task2F-Liam.py
+          python Task2G-Liam.py
+          
