@@ -16,4 +16,4 @@ def test_plot_water_levels():
 p = 2
 def test_plot_water_level_with_fit():
     with pytest.raises(TypeError):
-        plot_water_levels_with_fit(testStation4,"dates",levels,p)
+        plot_water_level_with_fit(testStation4,"dates",levels,p)
