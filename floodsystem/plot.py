@@ -6,6 +6,8 @@ import numpy as np
 def plot_water_levels(station, dates, levels):
     if isinstance(dates,str) or isinstance(levels,str):
         raise TypeError
+    if isinstance(dates,int) or isinstance(levels,int):
+        raise TypeError
     #plot
     else:
         plt.plot(dates,levels)
