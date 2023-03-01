@@ -13,6 +13,7 @@ def run():
     #takes the highest 5 stations
 
     for data in necessaryStations:
+        
         dates,levels = fetch_measure_levels(data[0].measure_id, datetime.timedelta(days=10))#data[0] is the station, data[1] is the risk level thingy
         plot_water_levels(data[0],dates,levels)
 

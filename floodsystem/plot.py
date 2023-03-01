@@ -4,9 +4,7 @@ import math
 import numpy as np
 
 def plot_water_levels(station, dates, levels):
-    if not(isinstance(dates,float) and isinstance(levels,float)):
-        raise TypeError
-    if isinstance(dates,int) or isinstance(levels,int):
+    if not(isinstance(levels[0],float)) or isinstance(dates,str):
         raise TypeError
     #plot
     else:
